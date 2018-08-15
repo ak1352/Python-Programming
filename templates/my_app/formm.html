@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Reverse Tracking & Content Segmentation</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="{% static 'my_app/Header-Blue.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'my_app/home_page.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'my_app/general.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+<div>
+    <div class="header-blue">
+        <nav class="navbar navbar-default navigation-clean-search">
+            <div class="container">
+                <div class="navbar-header"><a class="navbar-brand navbar-link"
+                                              href="http://127.0.0.1:6000/">HomePage</a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span
+                            class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                            class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <p class="navbar-text navbar-right"><a class="navbar-link login" href="#">Log In</a> <a
+                            class="btn btn-default action-button" role="button" href="#">Sign Up</a></p>
+                </div>
+            </div>
+        </nav>
+        <div class="container hero">
+            <div class="row">
+                <div>
+                    <div style="text-align: center;"><h1>CSV File To Domain/IP Conversion and Categorization.</h1></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="form-style-6 col-lg-6">
+                <h1>CSV File Handling</h1>
+                <form enctype="multipart/form-data" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                </form>
+            </div>
+            <div class="col-lg-6 csv_response">
+                <h1>CSV To IP :</h1>
+                <h1>CSV File Name is :</h1>
+                <h1>{{ csv_data }}</h1>
+                <h1>CSV File Data is :</h1>
+                <h1>{{ csv_response }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+
+<!--Header Blue Starts-->
+<!--Blue Header Files Starts-->
+
+
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
+
+
+
